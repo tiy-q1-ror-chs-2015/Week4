@@ -36,6 +36,7 @@
     %br
       = f.date_field :opening
   .field
+    = hidden_field_tag 'restaurant[food_ids][]', ''
     - @foods.each do |food|
       = check_box_tag 'restaurant[food_ids][]', food.id, @restaurant.foods.include?(food)
       = food.name
