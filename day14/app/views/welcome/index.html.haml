@@ -1,0 +1,24 @@
+%h1.hello_world.end_of_the_world#this_is_an_id{ class: "#{@new_class}" }
+  Foooooood
+  is good
+  is awesome
+down here
+
+%div
+  This is some cool text.
+
+= link_to "Restaurant List", restaurants_path
+%br
+= link_to "Food List", foods_path
+%br
+
+- if @array.length > 3
+  Good morning
+  %strong sunshine.
+
+- @array.each do |arr|
+  = arr.inspect
+
+
+%a
+  Robbi's Link
