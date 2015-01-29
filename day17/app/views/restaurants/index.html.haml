@@ -1,0 +1,20 @@
+%p#notice= notice
+%h1 Listing Restaurants
+%ul
+  - @restaurants.each do |restaurant|
+    %li.johnsclass{ class: is_restaurant_open?(restaurant)}
+      ||||||||||||
+      = restaurant.is_open?
+      ||||||||||||
+      = restaurant.name
+      = restaurant.description
+      = restaurant.address
+      = restaurant.city
+      = restaurant.state
+      = restaurant.zip
+      = restaurant.owner
+      = restaurant.opening
+      = link_to 'Show', restaurant_path(restaurant)
+      = link_to 'Edit', edit_restaurant_path(restaurant)
+      = link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }
+%br
